@@ -37,7 +37,7 @@ JS_COMPRESSION="Normal"
 ; Additional paths where to look for installed programs
 ; Example : ADD_PATHS="/opt/bin,/opt/sbin"
 ;
-ADD_PATHS=false
+ADD_PATHS="/ffp/bin,/ffp/sbin,/usr/local/zy-pkgs/bin"
 
 ; Plugins that should be included in xml and output
 ; List of plugins should look like "plugin,plugin,plugin". See /plugins directory
@@ -109,7 +109,7 @@ REFRESH=60000
 ; - true : displayed, but it's a performance hit (because we have to wait to get a value, 1 second)
 ; - false : will not be displayed
 ;
-LOAD_BAR=false
+LOAD_BAR=true
 
 
 ; Display the virtual host name and address
@@ -245,7 +245,7 @@ HIDE_MOUNTS=""
 ; Hide filesystem types
 ; Example : HIDE_FS_TYPES="tmpfs,devtmpfs,usbfs,bstfolder"
 ;
-HIDE_FS_TYPES=""
+HIDE_FS_TYPES="ext2,yaffs2,tmpfs"
 
 
 ; Hide partitions
@@ -269,13 +269,13 @@ FS_USAGE_THRESHOLD=90
 ; Hide network interfaces
 ; Example : HIDE_NETWORK_INTERFACE="eth0,sit0"
 ;
-HIDE_NETWORK_INTERFACE=""
+HIDE_NETWORK_INTERFACE="lo,sit0,ip6tnl0"
 
 
 ; Show network interfaces infos for Linux, FreeBSD, Haiku, Darwin, Minix and WinNT
 ; Example : SHOW_NETWORK_INFOS=true
 ;
-SHOW_NETWORK_INFOS=false
+SHOW_NETWORK_INFOS=true
 
 
 ; ********************************
@@ -404,13 +404,13 @@ ACCESS="command"
 ; - true : Regular expression search (used pgrep command)
 ; - false : Normal search (used pidof command)
 ;
-USE_REGEX=false
+USE_REGEX=true
 
 ; controls which processes are checked if they are running
 ;
 ; @var string contains a list of process names that are checked, names are seperated by a comma (on WINNT names must end with '.exe')
 ;
-PROCESSES="mysqld, sshd, explorer.exe"
+PROCESSES="mysqld, sshd"
 
 
 [quotas]
@@ -446,7 +446,7 @@ ACCESS="command"
 ; or
 ; - DEVICES="(megaraid.0)/dev/sda" //comma in --device option value is replaced by a dot
 ;
-DEVICES="/dev/sda, /dev/sdb"
+DEVICES="(marvell)/dev/sda, (marvell)/dev/sdb"
 
 ; Smartctl ID# and column name from "Vendor Specific SMART Attributes with Thresholds" table
 ; If the smartctl support is enabled, enter the ID#-COLUMN_NAME from "Vendor Specific SMART Attributes with Thresholds" table from smartctl output.
@@ -476,7 +476,7 @@ ACCESS="php-snmp"
 ;
 ; @var string contains a list of printer addresses that are checked
 ;
-DEVICES="192.168.0.5, 192.168.0.9"
+DEVICES="192.168.1.15, 192.168.1.16"
 
 
 [updatenotifier]
