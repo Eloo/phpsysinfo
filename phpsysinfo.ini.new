@@ -245,7 +245,7 @@ HIDE_MOUNTS=""
 ; Hide filesystem types
 ; Example : HIDE_FS_TYPES="tmpfs,devtmpfs,usbfs,bstfolder"
 ;
-HIDE_FS_TYPES="ext2,yaffs2,tmpfs"
+HIDE_FS_TYPES=""
 
 
 ; Hide partitions
@@ -470,7 +470,7 @@ IDS="005-RAW_VALUE,194-RAW_VALUE,4-RAW_VALUE,009-RAW_VALUE,012-RAW_VALUE,193-RAW
 ;    snmpwalk -On -c public -v 1 {printer_address} .1.3.6.1.2.1.43.11.1.1 >> snmppinfo{printer_number}.txt
 ;    snmpwalk -On -c public -v 1 {printer_address} .1.3.6.1.2.1.43.18.1.1 >> snmppinfo{printer_number}.txt
 ;
-ACCESS="php-snmp"
+ACCESS="command"
 
 ;define the Printer devices
 ;
