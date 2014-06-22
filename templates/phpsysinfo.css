@@ -62,10 +62,12 @@ h1 {
     margin: 10px 0 0 10px;
     _margin: 10px 5px 0 5px; /* ie6 */
     padding: 1px;
+    border: 1px solid #5A7E8A;
 }
 
 #memory, #filesystem {
     width: 96%;
+    border: 1px solid #5A7E8A;
 }
 
 h2 {

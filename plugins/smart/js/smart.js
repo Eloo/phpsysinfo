@@ -155,7 +155,7 @@ $(document).ready(function smart_buildpage() {
     var html = "";
 
     $("#footer").before(buildBlock("SMART", 1, true));
-    $("#Plugin_SMART").css("width", "90%");
+    $("#Plugin_SMART").css("width", "96%");
 
     smart_initTable();
 
