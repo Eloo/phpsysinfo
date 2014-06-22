@@ -111,7 +111,7 @@ function psstatus_request() {
 
 $(document).ready(function psstatus_buildpage() {
     $("#footer").before(buildBlock("PSStatus", 1, true));
-    $("#Plugin_PSStatus").css("width", "451px");
+    $("#Plugin_PSStatus").css("width", "44%");
 
     psstatus_buildTable();
 
