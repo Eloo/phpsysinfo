@@ -350,7 +350,7 @@ class XML
         $fs = $this->_xml->addChild('FileSystem');
         foreach ($this->_sys->getDiskDevices() as $disk) {
             if (!in_array($disk->getMountPoint(), $hideMounts, true) && !in_array($disk->getFsType(), $hideFstypes, true) && !in_array($disk->getName(), $hideDisks, true)) {
-                if(startsWith($disk->getMountPoint(), "/i-data/"){
+                if(startsWith($disk->getMountPoint(), "/i-data/")){
                   $mount = $fs->addChild('Mount');
                     $this->_fillDevice($mount, $disk, $i++);
                 }
