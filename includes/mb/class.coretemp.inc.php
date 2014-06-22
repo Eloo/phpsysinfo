@@ -43,6 +43,17 @@ class Coretemp extends Sensors
         }
     }
 
+    private function _fan_speed()
+        {
+            if (CommonFunctions::executeProgram('i2cget', '-y 0x0 0x0a 0x08', $speed)){
+                        $dev = new SensorDevice();
+                        $dev->setName("Fan");
+                        $speed = 60000/hexdec($speed);
+                        $dev->setValue($speed);
+                        $this->mbinfo->setMbFan($dev);
+            }
+        }
+
     /**
      * get the information
      *
@@ -53,5 +64,6 @@ class Coretemp extends Sensors
     public function build()
     {
         $this->_temperature();
+        $this->_fan_speed();
     }
 }
