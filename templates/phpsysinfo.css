@@ -20,7 +20,7 @@ html {
 
 body {
     position: relative;
-    width: 940px;
+    width: 1100px;
     _width: 945px; /* ie6 */
     min-height: 100%;
     overflow: auto;
@@ -58,7 +58,7 @@ h1 {
 
 #vitals, #network, #memory, #filesystem, #hardware, #temp, #voltage, #fan, #power, #current, #ups {
     float: left;
-    width: 451px;
+    width: 44%;
     margin: 10px 0 0 10px;
     _margin: 10px 5px 0 5px; /* ie6 */
     padding: 1px;

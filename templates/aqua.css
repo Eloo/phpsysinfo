@@ -56,7 +56,7 @@ h1 {
 
 #vitals, #network, #memory, #filesystem, #hardware, #temp, #voltage, #fan, #power, #current, #ups {
     float: left;
-    width: 451px;
+    width: 44%;
     margin: 10px 0 0 8px;
     _margin: 10px 4px 0 4px; /* ie6 */
     padding: 1px;
