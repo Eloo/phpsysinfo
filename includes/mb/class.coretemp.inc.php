@@ -33,7 +33,7 @@ class Coretemp extends Sensors
      */
     private function _temperature()
     {
-        if (CommonFunctions::executeProgram('i2cget', '-y 0x0 0x0a 0x07', $temp$){
+        if (CommonFunctions::executeProgram('i2cget', '-y 0x0 0x0a 0x07', $temp){
                     $dev = new SensorDevice();
                     $dev->setName("CPU");
                     $temp = hexdec($temp);
