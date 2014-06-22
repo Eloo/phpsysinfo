@@ -108,7 +108,7 @@ function ps_request() {
 
 $(document).ready(function ps_buildpage() {
     $("#footer").before(buildBlock("PS", 1, true));
-    $("#Plugin_PS").css("width", "96%px");
+    $("#Plugin_PS").css("width", "1000px");
 
     ps_request();
 

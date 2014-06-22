@@ -116,11 +116,11 @@ a:hover {
     margin:10px 0 0 10px;
     _margin: 10px 5px 0 5px; /* ie6 */
     padding:1px;
-    width:48%;
+    width:493px;
 }
 
 #memory,#filesystem {
-    width:96%;
+    width:1000px;
 }
 
 #select {

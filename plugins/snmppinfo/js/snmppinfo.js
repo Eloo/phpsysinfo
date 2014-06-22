@@ -128,7 +128,7 @@ function snmppinfo_request() {
 
 $(document).ready(function snmppinfo_buildpage() {
     $("#footer").before(buildBlock("SNMPPInfo", 1, true));
-    $("#Plugin_SNMPPInfo").css("width", "46%px");
+    $("#Plugin_SNMPPInfo").css("width", "493px");
 
     snmppinfo_request();
 
