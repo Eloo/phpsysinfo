@@ -56,7 +56,7 @@ ADD_PATHS="/ffp/bin,/ffp/sbin,/usr/local/zy-pkgs/bin, /sbin"
 ; - SNMPPInfo      - show printers info via SNMP
 ; - Uprecords      - show uprecords info
 ;
-PLUGINS=false
+PLUGINS="PS, PSStatus, SMART, SNMPPInfo"
 
 
 ; ********************************
