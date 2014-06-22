@@ -62,14 +62,17 @@ h1 {
     width: 100px;
 }
 
-#vitals, #network, #memory, #filesystem, #hardware, #temp, #voltage, #fan, #power, #currect, #ups {
+#vitals, #network, #memory, #filesystem, #hardware, #temp, #voltage, #fan, #power, #current, #ups {
     float: left;
-    width: 44%;
+    width: 48%;
     margin: 10px 0 0 10px;
     _margin: 10px 5px 0 5px; /* ie6 */
     padding: 1px;
-    border: 1px solid #354242;
 }
+
+#memory, #filesystem {
+    width: 96%;
+}}
 
 h2 {
     padding: 5px 10px;
@@ -121,10 +124,6 @@ h3 {
     padding: 13px 25px;
     line-height: 18px;
     text-align: right;
-}
-
-#memory, #filesystem {
-    width: 915px;
 }
 
 .bar {

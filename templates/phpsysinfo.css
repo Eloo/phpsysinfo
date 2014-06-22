@@ -58,11 +58,14 @@ h1 {
 
 #vitals, #network, #memory, #filesystem, #hardware, #temp, #voltage, #fan, #power, #current, #ups {
     float: left;
-    width: 44%;
+    width: 48%;
     margin: 10px 0 0 10px;
     _margin: 10px 5px 0 5px; /* ie6 */
     padding: 1px;
-    border: 1px solid #5A7E8A;
+}
+
+#memory, #filesystem {
+    width: 96%;
 }
 
 h2 {
@@ -114,10 +117,6 @@ h3 {
     margin: 12px;
     padding: 13px 25px;
     line-height: 18px;
-}
-
-#memory, #filesystem {
-    width: 915px;
 }
 
 .bar {
