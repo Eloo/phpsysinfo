@@ -37,7 +37,7 @@ JS_COMPRESSION="Normal"
 ; Additional paths where to look for installed programs
 ; Example : ADD_PATHS="/opt/bin,/opt/sbin"
 ;
-ADD_PATHS="/ffp/bin,/ffp/sbin,/usr/local/zy-pkgs/bin"
+ADD_PATHS="/ffp/bin,/ffp/sbin,/usr/local/zy-pkgs/bin, /sbin"
 
 ; Plugins that should be included in xml and output
 ; List of plugins should look like "plugin,plugin,plugin". See /plugins directory
@@ -171,7 +171,7 @@ TEMP_FORMAT="c"
 ; Example: If you want to use lmsensors : SENSOR_PROGRAM="LMSensors"
 ;          If you want to use lmsensors and IPMI: SENSOR_PROGRAM="LMSensors,IPMI"
 ;
-SENSOR_PROGRAM=false
+SENSOR_PROGRAM=Coretemp
 
 
 ; Define how to access the monitor program

@@ -33,17 +33,13 @@ class Coretemp extends Sensors
      */
     private function _temperature()
     {
-        $smp = 1;
-        CommonFunctions::executeProgram('sysctl', '-n kern.smp.cpus', $smp);
-        for ($i = 0; $i < $smp; $i++) {
-            $temp = 0;
-            if (CommonFunctions::executeProgram('sysctl', '-n dev.cpu.'.$i.'.temperature', $temp)) {
-                $dev = new SensorDevice();
-                $dev->setName("CPU ".($i + 1));
-                $dev->setValue($temp);
-                $dev->setMax(70);
-                $this->mbinfo->setMbTemp($dev);
-            }
+        if (CommonFunctions::executeProgram('i2cget', '-y 0x0 0x0a 0x07', $temp$){
+                    $dev = new SensorDevice();
+                    $dev->setName("CPU");
+                    $temp = hexdec($temp);
+                    $dev->setValue($temp);
+                    $dev->setMax(70);
+                    $this->mbinfo->setMbTemp($dev);
         }
     }
 
