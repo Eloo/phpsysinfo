@@ -48,9 +48,12 @@ class Coretemp extends Sensors
             if (CommonFunctions::executeProgram('i2cget', '-y 0x0 0x0a 0x08', $speed)){
                         $dev = new SensorDevice();
                         $dev->setName("Fan");
-                        $speed = 60000/hexdec($speed);
-                        $dev->setValue($speed);
-                        $this->mbinfo->setMbFan($dev);
+                        $speed = hexdec($speed);
+                        if(speed > 0){
+                            $speed = 60000/;
+                            $dev->setValue($speed);
+                            $this->mbinfo->setMbFan($dev);
+                        }
             }
         }
 
