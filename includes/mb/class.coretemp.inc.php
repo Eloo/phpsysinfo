@@ -49,6 +49,7 @@ class Coretemp extends Sensors
                         $dev = new SensorDevice();
                         $dev->setName("Fan");
                         $speed = hexdec($speed);
+                        if($speed > 0){
                             $speed = 60000/$speed;
                             $dev->setValue($speed);
                             $this->mbinfo->setMbFan($dev);
