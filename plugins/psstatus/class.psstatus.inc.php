@@ -75,6 +75,12 @@ class PSStatus extends PSI_Plugin
                             CommonFunctions::executeProgram("pgrep", "-n -x ".$process, $buffer, PSI_DEBUG);
                             if (strlen(trim($buffer)) > 0) {
                                 $this->_filecontent[] = array($process, trim($buffer));
+                            } else{
+                                CommonFunctions::executeProgram("ps", "ax | grep ".$process, $buffer, PSI_DEBUG);
+                                $array = explode("\n", trim($buffer));
+                                if(count($array)> 2){
+                                    $this->_filecontent[] = array($process, count($array));
+                                }
                             }
                         }
                     } else {
